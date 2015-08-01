@@ -121,7 +121,6 @@ results = page.search("td[@class='ranks']")
 next_up = 0
 count = 1
 until count > 264
-  p "creating player #{count}"
   p = []
   results[next_up..next_up+10].each do |e|
     p << e.text
@@ -148,6 +147,7 @@ until count > 264
                  :last_name => p_lname,
                  :age => p[3].to_i,
                  :position_id => p_pos.to_i,
+                 :stripped_name => p_search_name,
                  :rookie? => p_rookie,
                  :active? => true
                 )

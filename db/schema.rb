@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731043613) do
+ActiveRecord::Schema.define(version: 20150801043543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "dlf_ranks", force: :cascade do |t|
-    t.integer  "played_id"
+    t.integer  "player_id"
     t.integer  "month_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,10 +37,11 @@ ActiveRecord::Schema.define(version: 20150731043613) do
     t.integer  "age"
     t.integer  "position_id"
     t.integer  "team_id"
-    t.boolean  "rookie?",     default: false
-    t.boolean  "active?",     default: true
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.boolean  "rookie?",       default: false
+    t.boolean  "active?",       default: true
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "stripped_name"
   end
 
   create_table "positions", force: :cascade do |t|
