@@ -157,5 +157,18 @@ until count > 264
   count += 1
 end
 
+r_count = 1
+rookies.each do
+  Player.create(:first_name => "Pick",
+                 :last_name => "#{r_count}",
+                 :age => nil,
+                 :position_id => 6,
+                 :stripped_name => "PICK#{r_count}",
+                 :rookie? => true,
+                 :active? => true
+                )
+  r_count += 1
+end
+
 #######################################################################
 
