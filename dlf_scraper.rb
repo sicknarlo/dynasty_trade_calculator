@@ -38,13 +38,9 @@ class DlfScraper
       p_fname = p_name[0]
       p_lname = p_name[1]
       p_search_name = strip_name(p_fname, p_lname)
-      p_id = Player.where(:stripped_name => p_search_name)
-                     .first
-                     .id
       p_month = Month.where(:mon => month, :year => year)
                        .first
                        .id
-
       if Player.where(:stripped_name => p_search_name).blank?
         p "Creating new player!"
         p_pos = Position.where(:abbr => p[1])
@@ -66,6 +62,10 @@ class DlfScraper
                       :rookie? => p_rookie,
                       :active? => true
                       )
+        p_id = Player.where(:stripped_name => p_search_name)
+                     .first
+                     .id
+
 
         DlfRank.create(:player_id => p_id, :month_id => p_month, :rank => p_rank)
       else
@@ -87,6 +87,13 @@ class DlfScraper
       end
       next_up += 11
       count += 1
+    end
+
+    # Fill in ranks for those not ranked
+    Player.all.each do |player|
+      if player.dlf_ranks.where(:month_id => p_month).empty?
+        DlfRank.create(:player_id => player.id, :month_id => p_month, :rank => n + 10)
+      end
     end
   end
 end

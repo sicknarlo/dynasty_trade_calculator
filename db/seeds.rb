@@ -87,13 +87,13 @@ end
 # Add month
 
 # May 2015
-Month.create(:mon => "May", :year => 2015, :month_index => 0515)
+Month.create(:mon => "May", :year => 2015, :month_index => 515)
 
 # June 2015
-Month.create(:mon => "June", :year => 2015, :month_index => 0615)
+Month.create(:mon => "June", :year => 2015, :month_index => 615)
 
 # July 2015
-Month.create(:mon => "July", :year => 2015, :month_index => 0715)
+Month.create(:mon => "July", :year => 2015, :month_index => 715)
 
 ########################################################################
 

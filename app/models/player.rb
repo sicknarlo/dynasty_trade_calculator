@@ -21,11 +21,15 @@ class Player < ActiveRecord::Base
     ranks[2].rank - ranks[0].rank
   end
 
-  def self.dlf_top_trending_players
-    players = {}
-    self.all.each do |player|
-
-
+  def dlf_trends
+    player_trends = {}
+    Player.all.each do |player|
+      if player.dlf_
+      trend = player.dlf_ranks[-3].rank - dlf_ranks[-1].rank
+      player_trends[player.id] = trend
+    end
+    player_trend
+  end
 
   def full_name
     "#{self.first_name} #{self.last_name}"
