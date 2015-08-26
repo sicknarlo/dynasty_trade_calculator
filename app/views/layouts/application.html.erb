@@ -8,7 +8,19 @@
 </head>
 <body>
 
-<%= yield %>
+  <section class="container">
+    <section id="main-content">
+      <section class="wrapper">
+        <div>
+        <%= flash_messages %>
+        </div>
+        <div class="col-md-offset-2 col-md-8">
+          <h1>The Dynasty Trade Calculator <small>Updated 8/25</small></h1>
+        </div>
+        <%= yield %>
+      </section>
+    </section>
+  </section>
 
 </body>
 </html>

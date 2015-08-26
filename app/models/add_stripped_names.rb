@@ -1,0 +1,1 @@
+add_stripped_names.rb

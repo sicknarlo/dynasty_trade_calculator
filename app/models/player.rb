@@ -21,12 +21,17 @@ class Player < ActiveRecord::Base
     ranks[2].rank - ranks[0].rank
   end
 
+  def latest_rank
+    self.dlf_ranks.last.rank
+  end
+
   def dlf_trends
     player_trends = {}
     Player.all.each do |player|
-      if player.dlf_
+      if player.dlf_ranks
       trend = player.dlf_ranks[-3].rank - dlf_ranks[-1].rank
       player_trends[player.id] = trend
+    end
     end
     player_trend
   end
@@ -45,6 +50,18 @@ class Player < ActiveRecord::Base
                                               .gsub("-", "")
                                               .gsub(".", "")
                                               .gsub("'", "")
+  end
+
+  def value
+    val = 3000
+    if self.latest_rank == 1
+      return val
+    else
+      self.latest_rank.times do
+        val *= 0.98
+      end
+    end
+    val.to_i
   end
 
 end

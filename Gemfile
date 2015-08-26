@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'mechanize'
 gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+gem 'better_errors'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'chart-js-rails'
