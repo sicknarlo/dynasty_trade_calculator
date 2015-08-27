@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-xs-offset-1 col-xs-5">
+  <div class="col-xs-6">
     <table class="table table-hover">
       <thead>
         <th>Name</th>
@@ -18,6 +18,16 @@
             <td><%= player.latest_rank %></td>
             <td><%= player.dlf_trend_3_months %></td>
             <td><%= player.value %></td>
+          </tr>
+        <% end %>
+        <% (5 - @t1.length).times do %>
+          <tr>
+            <td> - </td>
+            <td> - </td>
+            <td> - </td>
+            <td> - </td>
+            <td> - </td>
+            <td> - </td>
           </tr>
         <% end %>
       </tbody>
@@ -41,8 +51,10 @@
         </tr>
       </tbody>
     </table>
+    <br>
+    <%= link_to "Run Another Trade", root_url, class: "btn btn-success" %>
   </div>
-  <div class="col-xs-5">
+  <div class="col-xs-6">
     <table class="table table-hover">
       <thead>
         <th>Name</th>
@@ -61,6 +73,16 @@
             <td><%= player.latest_rank %></td>
             <td><%= player.dlf_trend_3_months %></td>
             <td><%= player.value %></td>
+          </tr>
+        <% end %>
+        <% (5 - @t2.length).times do %>
+          <tr>
+            <td> - </td>
+            <td> - </td>
+            <td> - </td>
+            <td> - </td>
+            <td> - </td>
+            <td> - </td>
           </tr>
         <% end %>
       </tbody>
@@ -84,5 +106,11 @@
         </tr>
       </tbody>
     </table>
+    <br>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h3>The difference is comparable to <strong><%= @best_match[0] %></strong>, who has a value of <strong><%= @best_match[1] %></strong></h3>
+      </div>
+    </div>
   </div>
 </div>

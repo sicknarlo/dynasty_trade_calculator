@@ -59,7 +59,109 @@
     </div>
     <div class="col-md-offset-3 col-md-6">
         <br>
-        <%=submit_tag(value="Evaluate", class: "form-control") %>
+        <%=submit_tag(value="Evaluate", class: "form-control btn btn-success") %>
         <% end %>
     </div>
+
+</div>
+<br>
+
+<hr>
+
+<div class="row">
+  <div class="text-center">
+    <h3>August ADP Insights</h3>
+  </div>
+  <div class="col-md-4">
+    <h3 class="text-center">Most Valuable Players</h3>
+    <table class="table table-hover">
+      <thead>
+        <th>Position</th>
+        <th>Player</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Top Overall</td>
+          <td><%= Month.last.dlf_ranks.first.player.full_name %></td>
+        </tr>
+        <tr>
+          <td>Top QB</td>
+          <td><%= @top_qb.full_name %></td>
+        </tr>
+        <tr>
+          <td>Top WR</td>
+          <td><%= @top_wr.full_name %></td>
+        </tr>
+        <tr>
+          <td>Top RB</td>
+          <td><%= @top_rb.full_name %></td>
+        </tr>
+        <tr>
+          <td>Top TE</td>
+          <td><%= @top_te.full_name %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-4">
+    <h3 class="text-center">Top 150 3 Month Rising</h3>
+    <table class="table table-hover">
+      <thead>
+        <th>Player</th>
+        <th>3 Month Trend</th>
+        <th>Current ADP</th>
+      </thead>
+      <tbody>
+        <% 5.times.each do |i| %>
+        <tr>
+          <td><%= @top_150[-(i + 1)][0] %></td>
+          <td><%= @top_150[-(i + 1)][1] %></td>
+          <td><%= @top_150[-(i + 1)][2] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-4">
+    <h3 class="text-center">Top 150 3 Month Falling</h3>
+    <table class="table table-hover">
+      <thead>
+        <th>Player</th>
+        <th>3 Month Trend</th>
+        <th>Current ADP</th>
+      </thead>
+      <tbody>
+        <% 5.times.each do |i| %>
+        <tr>
+          <td><%= @top_150[i][0] %></td>
+          <td><%= @top_150[i][1] %></td>
+          <td><%= @top_150[i][2] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+<br>
+<hr>
+
+<div class="row">
+  <div class="col-md-7 panel panel-default">
+    <h2>About</h2>
+    <p>The Dynasty Trade Calculator is a tool that can be used to help provide some insight into the value being exchanged in a dynasty fantasy football trade.</p>
+    <p>Compare the value being exchanged for up to 5 players per team. Insert the player names. Be mindful of spelling; this tool is not idiot proof.</p>
+    <p>Future draft picks are not yet implemented, however rookie picks 1-36 are supported. Picks are not broken into rounds, rather by overall pick position (Pick 1..Pick 36)</p>
+    <p>Ultimately this is designed to show value being exchanged according to aggregate ADP. <strong>This is not intended to be used as the sole tool in a trade evaluation.</strong> Good trades take league structure, scoring format, player values, and many other things unique to that individual league into consideration.</p>
+    <p>This does not have a ton of bells and whistles. Originally designed as an Excel sheet, the goal is to keep this fast and simple to use. The intention was to open use to those who don't necessarily just use Excel, not to create a Webby nominated animation fest.</p>
+  </div>
+  <div class="col-md-offset-1 col-md-4 panel panel-default">
+    <h2>Contact</h2>
+    <p>This tool was created for you. If you have any suggestions, comments, bugs, or feedback please shoot me a message on reddit at <a href="https://www.reddit.com/user/sicknarlo">/u/sicknarlo</a>.Updates happen at least monthly.</p>
+    <p><a href="https://twitter.com/DynastyCalc"><i class="fa fa-twitter-square"></i> Follow us on Twitter for Updates</a></p>
+  </div>
+</div>
+
 </div>

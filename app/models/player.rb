@@ -18,7 +18,7 @@ class Player < ActiveRecord::Base
 
   def dlf_trend_3_months
     ranks = self.dlf_last_3_months
-    ranks[2].rank - ranks[0].rank
+    ranks[2].rank - ranks[0].rank unless ranks[2].rank.nil? || ranks[0].rank.nil?
   end
 
   def latest_rank
@@ -64,4 +64,11 @@ class Player < ActiveRecord::Base
     val.to_i
   end
 
+  def self.values
+    vals = []
+    Player.all.each do |player|
+      vals << [player.full_name, player.value]
+    end
+    vals
+  end
 end
