@@ -55,7 +55,6 @@ class SearchController < ApplicationController
         p = Player.find_by_stripped_name(p_stripped)
         if p.nil?
           flash[:error] = "Could not find '#{player}', check your entries and try again"
-          render :calculator
         else
           @t1 << p
           @t1_sending_value += p.value
@@ -76,7 +75,6 @@ class SearchController < ApplicationController
         p = Player.find_by_stripped_name(p_stripped)
         if p.nil?
           flash[:error] = "Could not find '#{player}', check your entries and try again"
-          render :calculator
         else
           @t2 << p
           @t2_sending_value += p.value
