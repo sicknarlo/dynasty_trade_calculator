@@ -1,6 +1,11 @@
 class SearchController < ApplicationController
 
   def calculator
+    @player_names = []
+    Player.all.each do |player|
+      @player_names << player.name
+    end
+
     @top_player = Month.last.dlf_ranks.first.player
     wr = Player.where(:position => 1)
     rb = Player.where(:position => 2)

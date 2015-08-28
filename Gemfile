@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails4-autocomplete'
 gem 'mechanize'
 gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
 gem 'better_errors'

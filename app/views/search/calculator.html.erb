@@ -1,31 +1,36 @@
 <div class="row">
     <div class="col-md-offset-1 col-md-5">
+        <datalist id="player-names">
+        <% Player.all.each do |player| %>
+          <option value="<%= player.full_name %>"></option>
+        <% end %>
+      </datalist>
         <h2>Team 1</h2>
 
         <%= form_tag("/results", method: "get") do %>
         <div class="form-group">
           <%= label_tag(:t1p1, "Player 1") %>
-          <%= text_field_tag(:t1p1, nil, class: "form-control") %>
+          <%= text_field_tag(:t1p1, nil, class: "form-control", list: "player-names") %>
         </div>
 
         <div class="form-group">
           <%= label_tag(:t1p2, "Player 2") %>
-          <%= text_field_tag(:t1p2, nil,class: "form-control") %>
+          <%= text_field_tag(:t1p2, nil, class: "form-control", list: "player-names") %>
         </div>
 
         <div class="form-group">
           <%= label_tag(:t1p3, "Player 3") %>
-          <%= text_field_tag(:t1p3, nil,class: "form-control") %>
+          <%= text_field_tag(:t1p3, nil,class: "form-control", list: "player-names") %>
         </div>
 
         <div class="form-group">
           <%= label_tag(:t1p4, "Player 4") %>
-          <%= text_field_tag(:t1p4, nil,class: "form-control") %>
+          <%= text_field_tag(:t1p4, nil,class: "form-control", list: "player-names") %>
         </div>
 
         <div class="form-group">
           <%= label_tag(:t1p5, "Player 5") %>
-          <%= text_field_tag(:t1p5, nil,class: "form-control") %>
+          <%= text_field_tag(:t1p5, nil,class: "form-control", list: "player-names") %>
         </div>
     </div>
     <div class="col-md-5">
@@ -33,27 +38,27 @@
 
         <div class="form-group">
           <%= label_tag(:t2p1, "Player 1") %>
-          <%= text_field_tag(:t2p1, nil,class: "form-control") %>
+          <%= text_field_tag(:t2p1, nil,class: "form-control", list: "player-names") %>
         </div>
 
         <div class="form-group">
           <%= label_tag(:t2p2, "Player 2") %>
-          <%= text_field_tag(:t2p2, nil,class: "form-control") %>
+          <%= text_field_tag(:t2p2, nil,class: "form-control", list: "player-names") %>
         </div>
 
         <div class="form-group">
           <%= label_tag(:t2p3, "Player 3") %>
-          <%= text_field_tag(:t2p3, nil,class: "form-control") %>
+          <%= text_field_tag(:t2p3, nil,class: "form-control", list: "player-names") %>
         </div>
 
         <div class="form-group">
           <%= label_tag(:t2p4, "Player 4") %>
-          <%= text_field_tag(:t2p4, nil,class: "form-control") %>
+          <%= text_field_tag(:t2p4, nil,class: "form-control", list: "player-names") %>
         </div>
 
         <div class="form-group">
           <%= label_tag(:t2p5, "Player 5") %>
-          <%= text_field_tag(:t2p5, nil,class: "form-control") %>
+          <%= text_field_tag(:t2p5, nil,class: "form-control", list: "player-names") %>
         </div>
 
     </div>
