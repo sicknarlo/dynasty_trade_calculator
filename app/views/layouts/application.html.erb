@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DynastyTradeCalculator</title>
+  <title>Dynasty Trade Machine</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <%= render partial: 'layouts/navbar' %>
 
   <section class="container">
     <section id="main-content">
@@ -14,12 +16,13 @@
         <div>
         <%= flash_messages %>
         </div>
-        <div class="col-md-offset-2 col-md-8">
-          <h1>The Dynasty Trade Calculator <small>Updated 8/25</small></h1>
-        </div>
         <%= yield %>
       </section>
     </section>
+    <hr>
+    <footer>
+      <p>&copy; 2015</p>
+    </footer>
   </section>
 
 </body>

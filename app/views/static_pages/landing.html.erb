@@ -1,0 +1,120 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>The Dynasty Trade Machine +</h1>
+    <p class="lead">Version 0.1.2 | Updated 8/28 </p>
+    <hr>
+  <div class="col-md-7 panel panel-default">
+    <h2>About</h2>
+    <p>The Dynasty Trade Machine is a tool that can be used to help GMs make data-driven decisions when evaluating assets in dynasty format fantasy football leagues.</p>
+    <p>The calculator allows an overview of the value being exchanged for up to 5 players per team. Insert the player names and the results will show the value both teams are getting along with who, according to ADP, the trade is in favor of.</p>
+    <p>Managing your team over multiple seasons is what makes "dynasty" fantasy football. Asset management is key to success, and draft picks are vital to long term success. The machine estimates the value of 2015 draft picks, as well as future 1st-3rd picks. To search for 2015 picks, search by overall pick number (i.e. "Pick 1" to "Pick 36"). Future draft picks can be entered for the first 3 rounds ("Future 1st", "Future 2nd", or "Future 3rd".</p>
+    <p>Ultimately this is designed to show value being exchanged according to aggregate ADP. <strong>This is not intended to be used as the sole tool in a trade evaluation.</strong> Good trades take league structure, scoring format, player values, and many other things unique to that individual league into consideration.</p>
+    <p>Now included is the ability to go through the data your own way. Search for players to see historical information about their ADP, including trends so you can see wh experts are buying and selling. Or look through the entire database.</p>
+  </div>
+  <div class="col-md-offset-1 col-md-4 panel panel-default">
+    <h2>Release 0.1.2 Notes</h2>
+    <ul>
+      <li>Calculator fields now autocomplete</li>
+      <li>Added ability to search for players</li>
+      <li>Created forward-facing database interface for users. Very early iteration, search and filtering to be added</li>
+    </ul>
+  </div>
+  <div class="col-md-offset-1 col-md-4 panel panel-default">
+    <h2>Contact</h2>
+    <p>This tool was created for you. If you have any suggestions, comments, bugs, or feedback please shoot me a message on reddit at <a href="https://www.reddit.com/user/sicknarlo">/u/sicknarlo</a>.Updates happen at least monthly.</p>
+    <p><a href="https://twitter.com/DynastyCalc"><i class="fa fa-twitter-square"></i> Follow us on Twitter for Updates</a></p>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 text-center">
+        <%= link_to "Trade Calculator", calculator_path, class: "btn btn-primary btn-lg" %>
+    </div>
+    <div class="col-md-4 text-center">
+        <div class="btn btn-primary btn-lg">Search Players</div>
+    </div>
+    <div class="col-md-4 text-center">
+        <div class="btn btn-primary btn-lg">View Database</div>
+    </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="text-center">
+    <h1>August ADP Insights</h1>
+  </div>
+  <div class="col-md-4">
+    <h3 class="text-center">Most Valuable Players</h3>
+    <table class="table table-hover">
+      <thead>
+        <th>Position</th>
+        <th>Player</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Top Overall</td>
+          <td><%= Month.last.dlf_ranks.first.player.full_name %></td>
+        </tr>
+        <tr>
+          <td>Top QB</td>
+          <td><%= @top_qb.full_name %></td>
+        </tr>
+        <tr>
+          <td>Top WR</td>
+          <td><%= @top_wr.full_name %></td>
+        </tr>
+        <tr>
+          <td>Top RB</td>
+          <td><%= @top_rb.full_name %></td>
+        </tr>
+        <tr>
+          <td>Top TE</td>
+          <td><%= @top_te.full_name %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-4">
+    <h3 class="text-center">Top 150 3 Month Rising</h3>
+    <table class="table table-hover">
+      <thead>
+        <th>Player</th>
+        <th>3 Month Trend</th>
+        <th>Current ADP</th>
+      </thead>
+      <tbody>
+        <% 5.times.each do |i| %>
+        <tr>
+          <td><%= @top_150[-(i + 1)][0] %></td>
+          <td><%= @top_150[-(i + 1)][1] %></td>
+          <td><%= @top_150[-(i + 1)][2] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-4">
+    <h3 class="text-center">Top 150 3 Month Falling</h3>
+    <table class="table table-hover">
+      <thead>
+        <th>Player</th>
+        <th>3 Month Trend</th>
+        <th>Current ADP</th>
+      </thead>
+      <tbody>
+        <% 5.times.each do |i| %>
+        <tr>
+          <td><%= @top_150[i][0] %></td>
+          <td><%= @top_150[i][1] %></td>
+          <td><%= @top_150[i][2] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+</div>

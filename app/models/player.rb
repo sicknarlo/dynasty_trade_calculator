@@ -3,6 +3,30 @@ class Player < ActiveRecord::Base
   belongs_to :position, foreign_key: :position_id
   has_one :team
 
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%")
+  end
+
+  def best_rank
+    b = [10000, nil]
+    dlf_ranks.each do |r|
+      if r.rank < b[0]
+        b = [r.rank, "#{r.month.mon} #{r.month.year}"]
+      end
+    end
+    b
+  end
+
+  def worst_rank
+    b = [-1, nil]
+    dlf_ranks.each do |r|
+      if r.rank > b[0]
+        b = [r.rank, "#{r.month.mon} #{r.month.year}"]
+      end
+    end
+    b
+  end
+
   def dlf_last_3_months
     dlf_ranks.order(:month_id => :desc).limit(3)
   end
@@ -18,7 +42,13 @@ class Player < ActiveRecord::Base
 
   def dlf_trend_3_months
     ranks = self.dlf_last_3_months
-    ranks[2].rank - ranks[0].rank unless ranks[2].rank.nil? || ranks[0].rank.nil?
+    if ranks.length == 1
+      ranks.first.rank
+    elsif ranks.length == 2
+      ranks[1].rank - ranks[0].rank
+    else
+      ranks[2].rank - ranks[0].rank unless ranks[2].rank.nil? || ranks[0].rank.nil?
+    end
   end
 
   def latest_rank
@@ -67,8 +97,20 @@ class Player < ActiveRecord::Base
   def self.values
     vals = []
     Player.all.each do |player|
-      vals << [player.full_name, player.value]
+      vals << [player.full_name, player.value, player.latest_rank]
     end
     vals
+  end
+
+  def strip_name(n)
+  # Returns a string of the first name and last name combined and
+  # with all punctuaion removed to search the DB and account for
+  # some variations in spelling
+    n.upcase.gsub(" JR", "")
+            .gsub(" SR", "")
+            .gsub(" ", "")
+            .gsub("-", "")
+            .gsub(".", "")
+            .gsub("'", "")
   end
 end

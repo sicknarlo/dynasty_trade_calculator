@@ -1,5 +1,6 @@
 <div class="row">
   <div class="col-md-6">
+    <h2>Team 1</h2>
     <table class="table table-hover">
       <thead>
         <th>Name</th>
@@ -52,9 +53,9 @@
       </tbody>
     </table>
     <br>
-    <%= link_to "Run Another Trade", root_url, class: "btn btn-success" %>
   </div>
   <div class="col-md-6">
+    <h2>Team 2</h2>
     <table class="table table-hover">
       <thead>
         <th>Name</th>
@@ -107,10 +108,85 @@
       </tbody>
     </table>
     <br>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h3>The difference is comparable to <strong><%= @best_match[0] %></strong>, who has a value of <strong><%= @best_match[1] %></strong></h3>
-      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body text-center">
+      <h3>The difference is comparable to <strong><%= @best_match[0] %></strong>, who has a value of <strong><%= @best_match[1] %></strong> and an ADP of <strong><%= @best_match[2] %></strong></h3>
     </div>
   </div>
+  <br>
+  <hr>
+
+<div id="calculator" class="row">
+    <div class="col-md-offset-1 col-md-5">
+        <datalist id="player-names">
+        <% Player.all.each do |player| %>
+          <option value="<%= player.full_name %>"></option>
+        <% end %>
+      </datalist>
+        <h2>Team 1</h2>
+
+        <%= form_tag("/results", method: "get") do %>
+        <div class="form-group">
+          <%= label_tag(:t1p1, "Player 1") %>
+          <%= text_field_tag(:t1p1, nil, class: "form-control", list: "player-names") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:t1p2, "Player 2") %>
+          <%= text_field_tag(:t1p2, nil, class: "form-control", list: "player-names") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:t1p3, "Player 3") %>
+          <%= text_field_tag(:t1p3, nil,class: "form-control", list: "player-names") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:t1p4, "Player 4") %>
+          <%= text_field_tag(:t1p4, nil,class: "form-control", list: "player-names") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:t1p5, "Player 5") %>
+          <%= text_field_tag(:t1p5, nil,class: "form-control", list: "player-names") %>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <h2>Team 2</h2>
+
+        <div class="form-group">
+          <%= label_tag(:t2p1, "Player 1") %>
+          <%= text_field_tag(:t2p1, nil,class: "form-control", list: "player-names") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:t2p2, "Player 2") %>
+          <%= text_field_tag(:t2p2, nil,class: "form-control", list: "player-names") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:t2p3, "Player 3") %>
+          <%= text_field_tag(:t2p3, nil,class: "form-control", list: "player-names") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:t2p4, "Player 4") %>
+          <%= text_field_tag(:t2p4, nil,class: "form-control", list: "player-names") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:t2p5, "Player 5") %>
+          <%= text_field_tag(:t2p5, nil,class: "form-control", list: "player-names") %>
+        </div>
+
+    </div>
+    <div class="col-md-offset-3 col-md-6">
+        <br>
+        <%=submit_tag(value="Evaluate", class: "form-control btn btn-success") %>
+        <% end %>
+    </div>
+
 </div>

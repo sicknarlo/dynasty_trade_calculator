@@ -1,0 +1,90 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>Search for a Player </h1>
+    <p class="lead">Historical Data +</p>
+  </div>
+</div>
+<hr>
+<datalist id="player-names">
+  <% Player.all.each do |player| %>
+    <option value="<%= player.full_name %>"></option>
+  <% end %>
+</datalist>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_tag players_path, :method => "get", class: "form-inline", id: "search-form" do %>
+      <div class="form-group">
+        <%= text_field_tag :search, params[:search], class: "form-control", list: "player-names" %>
+      </div>
+      <%= submit_tag "Search", class: "btn btn-default" %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<% if @player %>
+  <div class="row">
+  <div class="col-md-12 text-center">
+    <h1><%= @player.name %></h1>
+    <p class="lead"><%= @player.position.abbr %> | <%= @player.age %> years old</p>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default text-center">
+      <h2>Current ADP</h2>
+      <h3><%= @player.latest_rank %></h3>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default text-center">
+      <h2>3 Month Trend</h2>
+      <h3><%= @player.dlf_trend_3_months %></h3>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default text-center">
+      <h2>Trade Machine Value</h2>
+      <h3><%= @player.value %></h3>
+    </div>
+  </div>
+  <div class="col-md-offset-2 col-md-4">
+    <div class="panel panel-default text-center">
+      <h2>Best ADP</h2>
+      <h3><%= @player.best_rank[0] %> | <%= @player.best_rank[1] %></h3>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default text-center">
+      <h2>Worst ADP</h2>
+      <h3><%= @player.worst_rank[0] %> | <%= @player.worst_rank[1] %></h3>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Position</th>
+        <th>Current ADP</th>
+        <th>3 Month Trend</th>
+      </thead>
+      <tbody>
+        <% @similar_players.each do |player| %>
+        <% if player == @player %>
+          <tr class="active">
+        <% else %>
+          <tr>
+        <% end %>
+            <td><%= player.full_name %></td>
+            <td><%= player.age %></td>
+            <td><%= player.position.name %></td>
+            <td><%= player.latest_rank %></td>
+            <td><%= player.dlf_trend_3_months %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+<% end %>

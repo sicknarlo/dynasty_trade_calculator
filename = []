@@ -1,0 +1,255 @@
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| id  | fir | last | age | posi | team | rook | act | cre | upda | stri | name |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| 265 | Pic | 1    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 267 | Pic | 3    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 268 | Pic | 4    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 269 | Pic | 5    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 270 | Pic | 6    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 271 | Pic | 7    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 272 | Pic | 8    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 273 | Pic | 9    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 275 | Pic | 11   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 276 | Pic | 12   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 277 | Pic | 13   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 278 | Pic | 14   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 279 | Pic | 15   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 280 | Pic | 16   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 282 | Pic | 18   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 283 | Pic | 19   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 284 | Pic | 20   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 285 | Pic | 21   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 286 | Pic | 22   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 287 | Pic | 23   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 288 | Pic | 24   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 290 | Pic | 26   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 291 | Pic | 27   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 292 | Pic | 28   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 293 | Pic | 29   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 294 | Pic | 30   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 295 | Pic | 31   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 296 | Pic | 32   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 298 | Pic | 34   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 299 | Pic | 35   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 300 | Pic | 36   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 301 | Pic | 37   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 302 | Pic | 38   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 303 | Pic | 39   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 305 | Pic | 41   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 306 | Pic | 42   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 307 | Pic | 43   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 308 | Pic | 44   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 309 | Pic | 45   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 310 | Pic | 46   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 266 | Pic | 2    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 274 | Pic | 10   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 281 | Pic | 17   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 289 | Pic | 25   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 297 | Pic | 33   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 304 | Pic | 40   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+46 rows in set
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| id  | fir | last | age | posi | team | rook | act | cre | upda | stri | name |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| 265 | Pic | 1    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 267 | Pic | 3    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 268 | Pic | 4    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 269 | Pic | 5    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 270 | Pic | 6    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 271 | Pic | 7    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 272 | Pic | 8    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 273 | Pic | 9    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 275 | Pic | 11   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 276 | Pic | 12   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 277 | Pic | 13   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 278 | Pic | 14   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 279 | Pic | 15   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 280 | Pic | 16   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 282 | Pic | 18   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 283 | Pic | 19   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 284 | Pic | 20   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 285 | Pic | 21   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 286 | Pic | 22   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 287 | Pic | 23   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 288 | Pic | 24   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 290 | Pic | 26   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 291 | Pic | 27   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 292 | Pic | 28   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 293 | Pic | 29   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 294 | Pic | 30   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 295 | Pic | 31   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 296 | Pic | 32   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 298 | Pic | 34   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 299 | Pic | 35   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 300 | Pic | 36   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 301 | Pic | 37   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 302 | Pic | 38   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 303 | Pic | 39   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 305 | Pic | 41   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 306 | Pic | 42   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 307 | Pic | 43   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 308 | Pic | 44   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 309 | Pic | 45   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 310 | Pic | 46   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 266 | Pic | 2    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 274 | Pic | 10   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 281 | Pic | 17   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 289 | Pic | 25   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 297 | Pic | 33   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 304 | Pic | 40   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+46 rows in set
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| id  | fir | last | age | posi | team | rook | act | cre | upda | stri | name |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| 265 | Pic | 1    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 267 | Pic | 3    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 268 | Pic | 4    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 269 | Pic | 5    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 270 | Pic | 6    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 271 | Pic | 7    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 272 | Pic | 8    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 273 | Pic | 9    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 275 | Pic | 11   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 276 | Pic | 12   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 277 | Pic | 13   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 278 | Pic | 14   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 279 | Pic | 15   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 280 | Pic | 16   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 282 | Pic | 18   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 283 | Pic | 19   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 284 | Pic | 20   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 285 | Pic | 21   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 286 | Pic | 22   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 287 | Pic | 23   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 288 | Pic | 24   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 290 | Pic | 26   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 291 | Pic | 27   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 292 | Pic | 28   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 293 | Pic | 29   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 294 | Pic | 30   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 295 | Pic | 31   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 296 | Pic | 32   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 298 | Pic | 34   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 299 | Pic | 35   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 300 | Pic | 36   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 301 | Pic | 37   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 302 | Pic | 38   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 303 | Pic | 39   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 305 | Pic | 41   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 306 | Pic | 42   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 307 | Pic | 43   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 308 | Pic | 44   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 309 | Pic | 45   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 310 | Pic | 46   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 266 | Pic | 2    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 274 | Pic | 10   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 281 | Pic | 17   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 289 | Pic | 25   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 297 | Pic | 33   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 304 | Pic | 40   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+46 rows in set
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| id  | fir | last | age | posi | team | rook | act | cre | upda | stri | name |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| 265 | Pic | 1    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 267 | Pic | 3    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 268 | Pic | 4    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 269 | Pic | 5    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 270 | Pic | 6    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 271 | Pic | 7    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 272 | Pic | 8    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 273 | Pic | 9    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 275 | Pic | 11   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 276 | Pic | 12   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 277 | Pic | 13   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 278 | Pic | 14   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 279 | Pic | 15   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 280 | Pic | 16   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 282 | Pic | 18   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 283 | Pic | 19   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 284 | Pic | 20   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 285 | Pic | 21   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 286 | Pic | 22   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 287 | Pic | 23   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 288 | Pic | 24   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 290 | Pic | 26   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 291 | Pic | 27   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 292 | Pic | 28   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 293 | Pic | 29   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 294 | Pic | 30   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 295 | Pic | 31   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 296 | Pic | 32   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 298 | Pic | 34   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 299 | Pic | 35   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 300 | Pic | 36   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 301 | Pic | 37   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 302 | Pic | 38   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 303 | Pic | 39   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 305 | Pic | 41   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 306 | Pic | 42   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 307 | Pic | 43   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 308 | Pic | 44   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 309 | Pic | 45   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 310 | Pic | 46   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 266 | Pic | 2    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 274 | Pic | 10   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 281 | Pic | 17   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 289 | Pic | 25   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 297 | Pic | 33   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 304 | Pic | 40   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+46 rows in set
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| id  | fir | last | age | posi | team | rook | act | cre | upda | stri | name |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+| 265 | Pic | 1    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 267 | Pic | 3    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 268 | Pic | 4    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 269 | Pic | 5    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 270 | Pic | 6    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 271 | Pic | 7    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 272 | Pic | 8    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 273 | Pic | 9    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 275 | Pic | 11   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 276 | Pic | 12   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 277 | Pic | 13   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 278 | Pic | 14   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 279 | Pic | 15   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 280 | Pic | 16   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 282 | Pic | 18   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 283 | Pic | 19   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 284 | Pic | 20   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 285 | Pic | 21   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 286 | Pic | 22   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 287 | Pic | 23   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 288 | Pic | 24   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 290 | Pic | 26   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 291 | Pic | 27   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 292 | Pic | 28   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 293 | Pic | 29   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 294 | Pic | 30   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 295 | Pic | 31   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 296 | Pic | 32   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 298 | Pic | 34   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 299 | Pic | 35   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 300 | Pic | 36   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 301 | Pic | 37   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 302 | Pic | 38   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 303 | Pic | 39   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 305 | Pic | 41   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 306 | Pic | 42   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 307 | Pic | 43   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 308 | Pic | 44   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 309 | Pic | 45   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 310 | Pic | 46   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 266 | Pic | 2    |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 274 | Pic | 10   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 281 | Pic | 17   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 289 | Pic | 25   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 297 | Pic | 33   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
+| 304 | Pic | 40   |     | 6    |      | true | tru | 201 | 2015 | PICK | Pick |
++-----+-----+------+-----+------+------+------+-----+-----+------+------+------+
+46 rows in set

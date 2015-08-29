@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>Search for a Player </h1>
+    <p class="lead">Historical Data +</p>
+  </div>
+</div>
+<hr>
+<datalist id="player-names">
+  <% Player.all.each do |player| %>
+    <option value="<%= player.full_name %>"></option>
+  <% end %>
+</datalist>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_tag(players_path => "get", class: "form-inline", id: "search-form") do %>
+      <div class="form-group">
+        <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search for a Player", list: "player-names" %>
+      </div>
+      <%= submit_tag "Search", class: "btn btn-default" %>
+    <% end %>
+    </div>
+  </div>
+</div>

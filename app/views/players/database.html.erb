@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>Browse the Database </h1>
+    <p class="lead">250+ Fantasy Assets</p>
+  </div>
+</div>
+<hr>
+<datalist id="player-names">
+  <% @players.each do |player| %>
+    <option value="<%= player.full_name %>"></option>
+  <% end %>
+</datalist>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Age</th>
+        <th>Trend</th>
+        <th>Rank</th>
+      </thead>
+      <tbody>
+        <% @players.each do |player| %>
+          <tr id="<%= player.stripped_name %>">
+            <td><%= player.name %></td>
+            <td><%= player.position.abbr %></td>
+            <td><%= player.age %></td>
+            <td><%= player.dlf_trend_3_months %></td>
+            <td><%= player.latest_rank %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
