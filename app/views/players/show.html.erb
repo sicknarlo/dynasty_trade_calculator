@@ -52,7 +52,7 @@
         <% else %>
           <tr>
         <% end %>
-            <td><%= player.full_name %></td>
+            <td><%= link_to player.name, player_path(player) %></td>
             <td><%= player.age %></td>
             <td><%= player.position.name %></td>
             <td><%= player.latest_rank %></td>
