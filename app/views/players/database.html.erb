@@ -23,7 +23,7 @@
       <tbody>
         <% @players.each do |player| %>
           <tr id="<%= player.stripped_name %>">
-            <td><%= player.name %></td>
+            <td><%= link_to player.name, player_path(player) %></td>
             <td><%= player.position.abbr %></td>
             <td><%= player.age %></td>
             <td><%= player.dlf_trend_3_months %></td>
