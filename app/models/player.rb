@@ -82,13 +82,45 @@ class Player < ActiveRecord::Base
                                               .gsub("'", "")
   end
 
+  # def value
+  #   val = 3000
+  #   count = 1
+  #   if self.latest_rank == 1
+  #     return val
+  #   else
+  #     self.latest_rank.times do
+  #       if count > 5
+  #         val *= 0.99
+  #         count += 1
+  #       elsif count > 10
+  #         val *= 0.98
+  #         count += 1
+  #       elsif count > 15
+  #         val *= 0.97
+  #         count += 1
+  #       elsif count > 20
+  #         val *= 0.96
+  #         count += 1
+  #       elsif count > 25
+  #         val *= 0.95
+  #         count += 1
+  #       else
+  #         val *= 0.94
+  #         count += 1
+  #       end
+  #     end
+  #   end
+  #   val.to_i
+  # end
+
   def value
     val = 3000
+    count = 1
     if self.latest_rank == 1
       return val
     else
       self.latest_rank.times do
-        val *= 0.98
+        val *= 0.97
       end
     end
     val.to_i
