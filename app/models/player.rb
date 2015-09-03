@@ -129,7 +129,7 @@ class Player < ActiveRecord::Base
   def self.values
     vals = []
     Player.all.each do |player|
-      vals << [player.full_name, player.value, player.latest_rank]
+      vals << [player, player.value, player.latest_rank]
     end
     vals
   end

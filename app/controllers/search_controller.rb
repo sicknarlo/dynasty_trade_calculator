@@ -62,14 +62,14 @@ class SearchController < ApplicationController
     @t1_gained = @t2_sending_value - @t1_sending_value
     @t2_gained = @t1_sending_value - @t2_sending_value
 
-    exchanged = @t1_gained.abs
+    @exchanged = @t1_gained.abs
     rank = 1
     initial = 3000
 
     vals = Player.values
     best = ["No Match found", 5000, nil]
     vals.each do |p|
-      best = p if ((exchanged - p[1]).abs) < ((exchanged - best[1]).abs)
+      best = p if (((@exchanged - p[1]).abs) < ((@exchanged - best[1]).abs)) && !@t1.include?(p[0]) && !@t2.include?(p[0])
       p best
     end
 
