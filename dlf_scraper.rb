@@ -8,6 +8,19 @@ class DlfScraper
     @agent = Mechanize.new
   end
 
+  def scrape_all
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=1", 259, "January", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=2", 288, "February", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=3", 281, "March", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=4", 280, "April", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=5", 270, "May", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=6", 262, "June", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=7", 264, "July", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=8", 264, "August", 2015)
+  end
+
+
+
   def scrape(url, n, month, year)
     # Grab results URL
     page = @agent.get(url)
@@ -42,29 +55,25 @@ class DlfScraper
                        .first
                        .id
       if Player.where(:stripped_name => p_search_name).blank?
-        p "Creating new player!"
+        p "Creating #{p_name}!"
         p_pos = Position.where(:abbr => p[1])
                         .first
                         .id
         if rookies.include?(p_search_name)
           p_rookie = true
-          DlfRank.create(:player_id => Player.where(:last_name => "#{r_count}").first.id, :month_id => p_month, :rank => p_rank)
-          r_count += 1
         else
           p_rookie = false
         end
 
-        Player.create(:first_name => p_fname,
-                      :last_name => p_lname,
-                      :age => p[3].to_i,
-                      :position_id => p_pos.to_i,
-                      :stripped_name => p_search_name,
-                      :rookie? => p_rookie,
-                      :active? => true
-                      )
-        p_id = Player.where(:stripped_name => p_search_name)
-                     .first
-                     .id
+       newp = Player.create(:first_name => p_fname,
+                            :last_name => p_lname,
+                            :age => p[3].to_i,
+                            :position_id => p_pos.to_i,
+                            :stripped_name => p_search_name,
+                            :rookie? => p_rookie,
+                            :active? => true
+                            )
+        p_id = newp.id
 
 
         DlfRank.create(:player_id => p_id, :month_id => p_month, :rank => p_rank)
@@ -78,8 +87,6 @@ class DlfScraper
                        .id
         if rookies.include?(p_search_name)
           p_rookie = true
-          DlfRank.create(:player_id => Player.where(:last_name => "#{r_count}").first.id, :month_id => p_month, :rank => p_rank)
-          r_count += 1
         else
           p_rookie = false
         end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828013615) do
+ActiveRecord::Schema.define(version: 20150904035341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(version: 20150828013615) do
   create_table "positions", force: :cascade do |t|
     t.string   "name"
     t.string   "abbr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "redraft_ranks", force: :cascade do |t|
+    t.integer  "player_id"
+    t.integer  "month_id"
+    t.integer  "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

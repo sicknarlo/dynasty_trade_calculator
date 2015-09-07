@@ -8,6 +8,7 @@
         <th>Age</th>
         <th>ADP</th>
         <th>3 Month Trend</th>
+        <th>Redraft</th>
         <th>Value</th>
       </thead>
       <tbody>
@@ -18,11 +19,13 @@
             <td><%= player.age %></td>
             <td><%= player.latest_rank %></td>
             <td><%= player.dlf_trend_3_months %></td>
+            <td><%= player.latest_redraft_rank %>
             <td><%= player.value %></td>
           </tr>
         <% end %>
         <% (5 - @t1.length).times do %>
           <tr>
+            <td> - </td>
             <td> - </td>
             <td> - </td>
             <td> - </td>
@@ -64,6 +67,7 @@
         <th>Age</th>
         <th>ADP</th>
         <th>3 Month Trend</th>
+        <th>Redraft</th>
         <th>Value</th>
       </thead>
       <tbody>
@@ -74,11 +78,13 @@
             <td><%= player.age %></td>
             <td><%= player.latest_rank %></td>
             <td><%= player.dlf_trend_3_months %></td>
+            <td><%= player.latest_redraft_rank %></td>
             <td><%= player.value %></td>
           </tr>
         <% end %>
         <% (5 - @t2.length).times do %>
           <tr>
+            <td> - </td>
             <td> - </td>
             <td> - </td>
             <td> - </td>
@@ -115,10 +121,12 @@
 <div class="row">
   <div class="panel panel-default">
     <div class="panel-body text-center">
-      <% if @exchanged > 3000 %>
+      <h3>Fairness Score: <strong><%= (@dtmScore * 100).to_i %>%</strong></h3>
+      <% if @exchanged >= 10000 %>
       <h3>There is no asset that can make this trade even!</h3>
       <% else %>
-      <h3>The difference is comparable to <strong><%= @best_match[0].name %></strong>, who has a value of <strong><%= @best_match[1] %></strong> and an ADP of <strong><%= @best_match[2] %></strong></h3>
+      <h3>The difference is comparable to <strong><%= link_to @best_match[0].name, player_path(@best_match) %></strong>, who has a value of <strong><%= @best_match[1] %></strong> and an ADP of <strong><%= @best_match[2] %></strong></h3>
+      <p><%= link_to "Find other players near that value", player_path(@best_match) %></p>
       <% end %>
     </div>
   </div>

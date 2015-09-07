@@ -87,88 +87,90 @@ end
 # Add month
 
 # May 2015
-Month.create(:mon => "May", :year => 2015, :month_index => 515)
+Month.create(:mon => "January", :year => 2015, :month_index => 115)
 
 # June 2015
-Month.create(:mon => "June", :year => 2015, :month_index => 615)
+Month.create(:mon => "February", :year => 2015, :month_index => 215)
 
 # July 2015
+Month.create(:mon => "March", :year => 2015, :month_index => 315)
+
+# May 2015
+Month.create(:mon => "April", :year => 2015, :month_index => 415)
+
+# June 2015
+Month.create(:mon => "May", :year => 2015, :month_index => 515)
+
+# July 2015
+Month.create(:mon => "June", :year => 2015, :month_index => 615)
+
+#July 2015
 Month.create(:mon => "July", :year => 2015, :month_index => 715)
+
+#July 2015
+Month.create(:mon => "August", :year => 2015, :month_index => 815)
 
 ########################################################################
 
 
-# Initial player add from DLF scrape
-require 'mechanize'
+# # Initial player add from DLF scrape
+# require 'mechanize'
 
-# # Player struct to store player information for upload to db
-require 'csv'
+# # # Player struct to store player information for upload to db
+# require 'csv'
 
-rookies = []
-CSV.foreach("../dynasty_trade_calculator/db/rookies.csv") do |row|
-  p = row[0].upcase.gsub(" JR", "")
-                   .gsub(" SR", "")
-                   .gsub(" ", "")
-                   .gsub("-", "")
-                   .gsub(".", "")
-                   .gsub("'", "")
-  rookies << p
-end
+# rookies = []
+# CSV.foreach("../dynasty_trade_calculator/db/rookies.csv") do |row|
+#   p = row[0].upcase.gsub(" JR", "")
+#                    .gsub(" SR", "")
+#                    .gsub(" ", "")
+#                    .gsub("-", "")
+#                    .gsub(".", "")
+#                    .gsub("'", "")
+#   rookies << p
+# end
 
-agent = Mechanize.new
-page = agent.get("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=7")
-results = page.search("td[@class='ranks']")
-next_up = 0
-count = 1
-until count > 264
-  p = []
-  results[next_up..next_up+10].each do |e|
-    p << e.text
-  end
-  p_pos = p[1]
-  p_name = p[2].gsub(".", "").gsub("'", "").gsub(" Jr", "").gsub(" Sr", "").split(" ")
-  p_fname = p_name[0]
-  p_lname = p_name[1]
-  p_search_name = "#{p_fname}#{p_lname}".upcase.gsub(" JR", "")
-                                            .gsub(" SR", "")
-                                            .gsub(" ", "")
-                                            .gsub("-", "")
-                                            .gsub(".", "")
-                                            .gsub("'", "")
-  if rookies.include?(p_search_name)
-    p_rookie = true
-  else
-    p_rookie = false
-  end
-  p_pos = Position.where(:abbr => p[1])
-                  .first
-                  .id
-  n = Player.new(:first_name => p_fname,
-                 :last_name => p_lname,
-                 :age => p[3].to_i,
-                 :position_id => p_pos.to_i,
-                 :stripped_name => p_search_name,
-                 :rookie? => p_rookie,
-                 :active? => true
-                )
-  n.save if Player.where(:first_name => p_fname, :last_name => p_lname).empty?
-  p "Success!"
-  next_up += 11
-  count += 1
-end
+# agent = Mechanize.new
+# page = agent.get("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=5")
+# results = page.search("td[@class='ranks']")
+# next_up = 0
+# count = 1
+# until count > 270
+#   p = []
+#   results[next_up..next_up+10].each do |e|
+#     p << e.text
+#   end
+#   p_pos = p[1]
+#   p_name = p[2].gsub(".", "").gsub("'", "").gsub(" Jr", "").gsub(" Sr", "").split(" ")
+#   p_fname = p_name[0]
+#   p_lname = p_name[1]
+#   p_search_name = "#{p_fname}#{p_lname}".upcase.gsub(" JR", "")
+#                                             .gsub(" SR", "")
+#                                             .gsub(" ", "")
+#                                             .gsub("-", "")
+#                                             .gsub(".", "")
+#                                             .gsub("'", "")
+#   if rookies.include?(p_search_name)
+#     p_rookie = true
+#   else
+#     p_rookie = false
+#   end
+#   p_pos = Position.where(:abbr => p[1])
+#                   .first
+#                   .id
+#   n = Player.new(:first_name => p_fname,
+#                  :last_name => p_lname,
+#                  :age => p[3].to_i,
+#                  :position_id => p_pos.to_i,
+#                  :stripped_name => p_search_name,
+#                  :rookie? => p_rookie,
+#                  :active? => true
+#                 )
+#   n.save if Player.where(:first_name => p_fname, :last_name => p_lname).empty?
+#   p "Success!"
+#   next_up += 11
+#   count += 1
+# end
 
-r_count = 1
-rookies.each do
-  Player.create(:first_name => "Pick",
-                 :last_name => "#{r_count}",
-                 :age => nil,
-                 :position_id => 6,
-                 :stripped_name => "PICK#{r_count}",
-                 :rookie? => true,
-                 :active? => true
-                )
-  r_count += 1
-end
-
-#######################################################################
+# #######################################################################
 

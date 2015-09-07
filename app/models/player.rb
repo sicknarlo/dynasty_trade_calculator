@@ -1,10 +1,19 @@
 class Player < ActiveRecord::Base
-  has_many :dlf_ranks
+  has_many :dlf_ranks, dependent: :destroy
   belongs_to :position, foreign_key: :position_id
   has_one :team
+  has_many :redraft_ranks, dependent: :destroy
 
   def self.search(search)
     where("name LIKE ?", "%#{search}%")
+  end
+
+  def latest_redraft_rank
+    redraft_ranks.last.rank unless redraft_ranks.last.nil?
+  end
+
+  def redraft_difference
+    latest_redraft_rank - latest_rank unless redraft_ranks.last.nil?
   end
 
   def best_rank
@@ -15,6 +24,23 @@ class Player < ActiveRecord::Base
       end
     end
     b
+  end
+
+  def similar_players
+    similar_players = []
+      five_lower_players = Month.last.dlf_ranks.where("rank < #{self.latest_rank} AND rank >= #{self.latest_rank - 5}")
+      five_higher_players = Month.last.dlf_ranks.where("rank > #{self.latest_rank} AND rank <= #{self.latest_rank + 5}")
+
+      five_lower_players.each do |p|
+        similar_players << p.player
+      end
+
+      similar_players << player
+
+      five_higher_players.each do |p|
+        similar_players << p.player
+      end
+      similar_players
   end
 
   def worst_rank
@@ -114,7 +140,7 @@ class Player < ActiveRecord::Base
   # end
 
   def value
-    val = 3000
+    val = 10000
     count = 1
     if self.latest_rank == 1
       return val
@@ -123,7 +149,8 @@ class Player < ActiveRecord::Base
         val *= 0.97
       end
     end
-    val.to_i
+    # val.to_i
+    val.round(2)
   end
 
   def self.values
@@ -132,6 +159,13 @@ class Player < ActiveRecord::Base
       vals << [player, player.value, player.latest_rank]
     end
     vals
+  end
+
+  def self.median_value
+    vals = Player.values
+    vals = vals.sort_by{|x,y,z| y}
+    len = vals.length
+    return (vals[(len - 1) / 2][1] + vals[len / 2][1]) / 2.0
   end
 
   def strip_name(n)

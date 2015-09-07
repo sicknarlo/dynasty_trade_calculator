@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-12 panel panel-default">
     <h2>How to Use:</h2>
-    <p>Insert the players on both sides of the trade into the fields below. The database should have almost any player you need (and if not, please <a href="https://twitter.com/DynastyFFTools">let us know!</a>). Since players are hardly the only asset in dynasty fantasy football, you can also search for 2015 draft picks and future draft picks. To search for 2015 picks, simply search for the overall pick number ("Pick 1", "Pick 2"..."Pick 46"). To search for 2016 and beyond, search for "Future 1st", "Future 2nd", and so on. Future draft picks are limited to 4th round picks as it becomes increasingly to determine value beyond there.</p>
+    <p>Insert the players on both sides of the trade into the fields below. The database should have almost any player you need (and if not, please <a href="https://twitter.com/DynastyFFTools">let us know!</a>). Since players are hardly the only asset in dynasty fantasy football, you can also search for future draft picks. Draft picks for the first 4 rounds are now available -- to find them simply search for the year and the round ("2016 1st", "2017 3rd", etc)</p>
   </div>
 </div>
 
@@ -71,7 +71,7 @@
     </div>
     <div class="col-md-offset-3 col-md-6">
         <br>
-        <%=submit_tag(value="Evaluate", class: "form-control btn btn-success") %>
+        <%=submit_tag(value="Evaluate", method: "post", class: "form-control btn btn-success") %>
         <% end %>
     </div>
 
