@@ -1,4 +1,4 @@
-# 2016 1st
+  # 2016 1st
 base_1st = 48
 base_2nd = 118
 base_3rd = 170
@@ -49,6 +49,29 @@ player.dlf_ranks.create(
 player.dlf_ranks.create(
                         month_id: 4,
                         rank: base_2nd)
+
+# 2017 3rd
+player = Player.create(
+                        first_name: "2016",
+                         last_name: "3rd",
+                       position_id: "7",
+                           rookie?: true,
+                           active?: true,
+                     stripped_name: "20163RD",
+                              name: "2016 3rd")
+
+player.dlf_ranks.create(
+                        month_id: 1,
+                        rank: base_3rd)
+player.dlf_ranks.create(
+                        month_id: 2,
+                        rank: base_3rd)
+player.dlf_ranks.create(
+                        month_id: 3,
+                        rank: base_3rd)
+player.dlf_ranks.create(
+                        month_id: 4,
+                        rank: base_3rd)
 
 
 
@@ -183,16 +206,16 @@ player = Player.create(
 
 player.dlf_ranks.create(
                         month_id: 1,
-                        rank: base_1st * (multiplier * 2))
+                        rank: base_1st * 1.66)
 player.dlf_ranks.create(
                         month_id: 2,
-                        rank: base_1st * (multiplier * 2))
+                        rank: base_1st * 1.66)
 player.dlf_ranks.create(
                         month_id: 3,
-                        rank: base_1st * (multiplier * 2))
+                        rank: base_1st * 1.66)
 player.dlf_ranks.create(
                         month_id: 4,
-                        rank: base_1st * (multiplier * 2))
+                        rank: base_1st * 1.66)
 
 # Future 2nd
 player = Player.create(
@@ -206,16 +229,16 @@ player = Player.create(
 
 player.dlf_ranks.create(
                         month_id: 1,
-                        rank: base_2nd * (multiplier * 2))
+                        rank: base_2nd * 1.66)
 player.dlf_ranks.create(
                         month_id: 2,
-                        rank: base_2nd * (multiplier * 2))
+                        rank: base_2nd * 1.66)
 player.dlf_ranks.create(
                         month_id: 3,
-                        rank: base_2nd * (multiplier * 2))
+                        rank: base_2nd * 1.66)
 player.dlf_ranks.create(
                         month_id: 4,
-                        rank: base_2nd * (multiplier * 2))
+                        rank: base_2nd * 1.66)
 
 # 2018 3rd
 player = Player.create(
@@ -229,16 +252,16 @@ player = Player.create(
 
 player.dlf_ranks.create(
                         month_id: 1,
-                        rank: base_3rd * (multiplier * 2))
+                        rank: base_3rd * 1.66)
 player.dlf_ranks.create(
                         month_id: 2,
-                        rank: base_3rd * (multiplier * 2))
+                        rank: base_3rd * 1.66)
 player.dlf_ranks.create(
                         month_id: 3,
-                        rank: base_3rd * (multiplier * 2))
+                        rank: base_3rd * 1.66)
 player.dlf_ranks.create(
                         month_id: 4,
-                        rank: base_3rd * (multiplier * 2))
+                        rank: base_3rd * 1.66)
 
 # 2018 4th
 player = Player.create(
