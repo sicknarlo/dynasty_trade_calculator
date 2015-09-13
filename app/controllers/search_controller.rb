@@ -75,6 +75,17 @@ class SearchController < ApplicationController
     end
 
     @best_match = best
+
+    # respond_to do |format|
+
+    #   # Renders the usual `index.html.erb` template
+    #   format.html
+
+    #   # Send back a specific collection, so no template
+    #   #   needed
+    #   format.json { render json: @players }
+
+    # end
   end
 
   def player
