@@ -42,7 +42,7 @@ class PlayersController < ApplicationController
 
     @player_data = []
     @player.dlf_ranks.each do |dlf|
-      @player_data << [dlf.rank, dlf.month.mon + " " + dlf.month.year.to_s]
+      @player_data << [dlf.rank, dlf.month.mon[0..2] + " " + dlf.month.year.to_s]
     end
 
     respond_to do |format|
