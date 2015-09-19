@@ -50,6 +50,7 @@ class DlfScraper
       p_name = p[2].gsub(".", "").gsub("'", "").gsub(" Jr", "").gsub(" Sr", "").split(" ")
       p_fname = p_name[0]
       p_lname = p_name[1]
+      p_age = p[3].to_i
       p_search_name = strip_name(p_fname, p_lname)
       p_month = Month.where(:mon => month, :year => year)
                        .first
@@ -82,6 +83,7 @@ class DlfScraper
         p_id = Player.where(:stripped_name => p_search_name)
                      .first
                      .id
+        Player.find(p_id).age = p_age if p_age != Player.find(p_id).age
         p_month = Month.where(:mon => month, :year => year)
                        .first
                        .id
