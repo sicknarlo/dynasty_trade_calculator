@@ -125,8 +125,8 @@
       <% if @exchanged >= 10000 %>
       <h3>There is no asset that can make this trade even!</h3>
       <% else %>
-      <h3>The difference is comparable to <strong><%= link_to @best_match[0].name, player_path(@best_match) %></strong>, who has a value of <strong><%= @best_match[1] %></strong> and an ADP of <strong><%= @best_match[2] %></strong></h3>
-      <p><%= link_to "Find other players near that value", player_path(@best_match) %></p>
+      <h3>The difference is comparable to <strong><%= link_to @best_match[0].name, player_path(@best_match[0]) %></strong>, who has a value of <strong><%= @best_match[1] %></strong> and an ADP of <strong><%= @best_match[2] %></strong></h3>
+      <p><%= link_to "Find other players near that value", player_path(@best_match[0]) %></p>
       <% end %>
     </div>
   </div>

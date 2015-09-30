@@ -74,6 +74,7 @@ class SearchController < ApplicationController
       p best
     end
 
+    binding.pry
     @best_match = best
 
     # respond_to do |format|
