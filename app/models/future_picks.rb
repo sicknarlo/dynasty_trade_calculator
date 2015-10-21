@@ -5,6 +5,7 @@ base_3rd = 170
 base_4th = 239
 multiplier = 1.33
 max = 340
+
 player = Player.create(
                         first_name: "2016",
                          last_name: "1st",
@@ -14,18 +15,11 @@ player = Player.create(
                      stripped_name: "20161ST",
                               name: "2016 1st")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_1st)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_1st)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_1st)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_1st)
+end
 
 # Future 2nd
 player = Player.create(
@@ -37,18 +31,11 @@ player = Player.create(
                      stripped_name: "20162ND",
                               name: "2016 2nd")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_2nd)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_2nd)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_2nd)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_2nd)
+end
 
 # 2017 3rd
 player = Player.create(
@@ -60,18 +47,11 @@ player = Player.create(
                      stripped_name: "20163RD",
                               name: "2016 3rd")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_3rd)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_3rd)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_3rd)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_3rd)
+end
 
 
 
@@ -85,18 +65,11 @@ player = Player.create(
                      stripped_name: "20164TH",
                               name: "2016 4th")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_4th)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_4th)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_4th)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_4th)
+end
 
 #------------------------------------------------------------
 
@@ -110,18 +83,11 @@ player = Player.create(
                      stripped_name: "20171ST",
                               name: "2017 1st")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_1st * multiplier)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_1st * multiplier)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_1st * multiplier)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_1st * multiplier)
+end
 
 # Future 2nd
 player = Player.create(
@@ -133,18 +99,11 @@ player = Player.create(
                      stripped_name: "20172ND",
                               name: "2017 2nd")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_2nd * multiplier)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_2nd * multiplier)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_2nd * multiplier)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_2nd * multiplier)
+end
 
 # 2017 3rd
 player = Player.create(
@@ -156,18 +115,11 @@ player = Player.create(
                      stripped_name: "20173RD",
                               name: "2017 3rd")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_3rd * multiplier)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_3rd * multiplier)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_3rd * multiplier)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_3rd * multiplier)
+end
 
 # 2017 4th
 player = Player.create(
@@ -179,18 +131,11 @@ player = Player.create(
                      stripped_name: "20174TH",
                               name: "2017 4th")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: max)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: max)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: max)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: max)
+end
 
 #-----------------------------------------------------
 
@@ -204,18 +149,11 @@ player = Player.create(
                      stripped_name: "20181ST",
                               name: "2018 1st")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_1st * 1.66)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_1st * 1.66)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_1st * 1.66)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_1st * 1.66)
+end
 
 # Future 2nd
 player = Player.create(
@@ -227,18 +165,11 @@ player = Player.create(
                      stripped_name: "20182ND",
                               name: "2018 2nd")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_2nd * 1.66)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_2nd * 1.66)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_2nd * 1.66)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_2nd * 1.66)
+end
 
 # 2018 3rd
 player = Player.create(
@@ -250,18 +181,11 @@ player = Player.create(
                      stripped_name: "20183RD",
                               name: "2018 3rd")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: base_3rd * 1.66)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: base_3rd * 1.66)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: base_3rd * 1.66)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: base_3rd * 1.66)
+end
 
 # 2018 4th
 player = Player.create(
@@ -273,15 +197,8 @@ player = Player.create(
                      stripped_name: "20184TH",
                               name: "2018 4th")
 
-player.dlf_ranks.create(
-                        month_id: 1,
+Month.all.each do |m|
+  player.dlf_ranks.create(
+                        month_id: m.id,
                         rank: max)
-player.dlf_ranks.create(
-                        month_id: 2,
-                        rank: max)
-player.dlf_ranks.create(
-                        month_id: 3,
-                        rank: max)
-player.dlf_ranks.create(
-                        month_id: 4,
-                        rank: max)
+end

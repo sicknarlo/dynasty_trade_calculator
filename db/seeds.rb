@@ -110,6 +110,10 @@ Month.create(:mon => "July", :year => 2015, :month_index => 715)
 #July 2015
 Month.create(:mon => "August", :year => 2015, :month_index => 815)
 
+Month.create(:mon => "September", :year => 2015, :month_index => 915)
+
+Month.create(:mon => "October", :year => 2015, :month_index =>1015)
+
 ########################################################################
 
 

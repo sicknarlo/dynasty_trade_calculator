@@ -8,7 +8,6 @@
         <th>Age</th>
         <th>ADP</th>
         <th>3 Month Trend</th>
-        <th>Redraft</th>
         <th>Value</th>
       </thead>
       <tbody>
@@ -19,13 +18,11 @@
             <td><%= player.age %></td>
             <td><%= player.latest_rank %></td>
             <td><%= player.dlf_trend_3_months %></td>
-            <td><%= player.latest_redraft_rank %>
             <td><%= player.value %></td>
           </tr>
         <% end %>
         <% (5 - @t1.length).times do %>
           <tr>
-            <td> - </td>
             <td> - </td>
             <td> - </td>
             <td> - </td>
@@ -67,7 +64,6 @@
         <th>Age</th>
         <th>ADP</th>
         <th>3 Month Trend</th>
-        <th>Redraft</th>
         <th>Value</th>
       </thead>
       <tbody>
@@ -78,13 +74,11 @@
             <td><%= player.age %></td>
             <td><%= player.latest_rank %></td>
             <td><%= player.dlf_trend_3_months %></td>
-            <td><%= player.latest_redraft_rank %></td>
             <td><%= player.value %></td>
           </tr>
         <% end %>
         <% (5 - @t2.length).times do %>
           <tr>
-            <td> - </td>
             <td> - </td>
             <td> - </td>
             <td> - </td>

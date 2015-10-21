@@ -17,6 +17,8 @@ class DlfScraper
     scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=6", 262, "June", 2015)
     scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=7", 264, "July", 2015)
     scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=8", 264, "August", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=9", 250, "September", 2015)
+    scrape("http://dynastyleaguefootball.com/adpdata/2015-adp/?month=10", 263, "October", 2015)
   end
 
 
